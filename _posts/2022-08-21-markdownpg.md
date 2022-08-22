@@ -24,3 +24,5 @@ title: TT 1.0 Tools and Equipment
 [Link to Commit](https://github.com/ProRichyMan/JavaProject1.5/commit/8b90dca67897cd4064fda1cf60c23e44e48eebbc)
 
 <img width="1439" alt="Screen Shot 2022-08-21 at 9 40 46 PM" src="https://user-images.githubusercontent.com/89236893/185850893-0c2fbf0e-975a-4c6f-af14-5106ebfc866e.png">
+
+[Link to Issue](https://github.com/ProRichyMan/CSA-Fastpages/issues/2)
