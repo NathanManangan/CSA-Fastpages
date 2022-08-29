@@ -1,12 +1,13 @@
-# "Collegeboard Notes"
-> "Capture Units of Collegeboard"
-
-- toc: true
-- branch: master
-- badges: true
-- comments: true
-- categories: [collegeboard]
-- sticky_rank: 1
+---
+toc: true
+layout: post
+description: Capture Units of Collegeboard
+comments: true
+badges: true
+categories: [collegeboard]
+title: Collegeboard Notes
+sticky_rank: 1
+---
 
 # Collegeboard Unit Notes
 
