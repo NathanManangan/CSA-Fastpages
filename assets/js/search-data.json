@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Testpbl",
-            "content": "“TEST PBL” . “Capture PBL” . toc: true | branch: master | badges: true | comments: true | categories: [pbl] | . PBL Features . Filler | .",
-            "url": "https://prorichyman.github.io/CSA-Fastpages/2022/08/29/testpbl.html",
-            "relUrl": "/2022/08/29/testpbl.html",
+            "title": "TEST PBL",
+            "content": "PBL Features . Filler | .",
+            "url": "https://prorichyman.github.io/CSA-Fastpages/pbl/2022/08/29/testpbl.html",
+            "relUrl": "/pbl/2022/08/29/testpbl.html",
             "date": " • Aug 29, 2022"
         }
         
@@ -13,10 +13,10 @@
   
     
         ,"post1": {
-            "title": "Testnotes",
-            "content": "“TEST Collegeboard Notes” . “Capture Units of Collegeboard” . toc: true | branch: master | badges: true | comments: true | categories: [collegeboard] | . Notes . Filler | .",
-            "url": "https://prorichyman.github.io/CSA-Fastpages/2022/08/29/testnotes.html",
-            "relUrl": "/2022/08/29/testnotes.html",
+            "title": "TEST Collegeboard Notes",
+            "content": "Notes . Filler | .",
+            "url": "https://prorichyman.github.io/CSA-Fastpages/collegeboard/2022/08/29/testnotes.html",
+            "relUrl": "/collegeboard/2022/08/29/testnotes.html",
             "date": " • Aug 29, 2022"
         }
         
@@ -24,10 +24,10 @@
   
     
         ,"post2": {
-            "title": "Pbl",
-            "content": "“PBL” . “Capture PBL” . toc: true | branch: master | badges: true | comments: true | categories: [pbl] | sticky_rank: 2 | . PBL Features . Test PBL | .",
-            "url": "https://prorichyman.github.io/CSA-Fastpages/2022/08/29/pbl.html",
-            "relUrl": "/2022/08/29/pbl.html",
+            "title": "PBL",
+            "content": "PBL Features . Test PBL | .",
+            "url": "https://prorichyman.github.io/CSA-Fastpages/pbl/2022/08/29/pbl.html",
+            "relUrl": "/pbl/2022/08/29/pbl.html",
             "date": " • Aug 29, 2022"
         }
         
@@ -35,10 +35,10 @@
   
     
         ,"post3": {
-            "title": "Collegeboard",
-            "content": "“Collegeboard Notes” . “Capture Units of Collegeboard” . toc: true | branch: master | badges: true | comments: true | categories: [collegeboard] | sticky_rank: 1 | . Collegeboard Unit Notes . Test Notes | .",
-            "url": "https://prorichyman.github.io/CSA-Fastpages/2022/08/29/collegeboard.html",
-            "relUrl": "/2022/08/29/collegeboard.html",
+            "title": "Collegeboard Notes",
+            "content": "Collegeboard Unit Notes . Test Notes | .",
+            "url": "https://prorichyman.github.io/CSA-Fastpages/collegeboard/2022/08/29/collegeboard.html",
+            "relUrl": "/collegeboard/2022/08/29/collegeboard.html",
             "date": " • Aug 29, 2022"
         }
         
