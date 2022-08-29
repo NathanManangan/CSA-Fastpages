@@ -9,8 +9,8 @@ title: Collegeboard Notes
 sticky_rank: 1
 ---
 
-![Collegboard Image](/images/collegeboard.png)
+![Collegeboard Image]({{ site.baseurl }}/images/collegeboard.png "Collegeboard Logo")
 
 # Collegeboard Unit Notes
 
-- [Test Notes](https://prorichyman.github.io/CSA-Fastpages/collegeboard/2022/08/29/testnotes.html)
+- Filler
