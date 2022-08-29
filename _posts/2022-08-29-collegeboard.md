@@ -7,9 +7,8 @@ badges: true
 categories: [collegeboard]
 title: Collegeboard Notes
 sticky_rank: 1
+image: images/collegeboard.png
 ---
-
-![Collegeboard Image]({{ site.baseurl }}/images/collegeboard.png "Collegeboard Logo")
 
 # Collegeboard Unit Notes
 
