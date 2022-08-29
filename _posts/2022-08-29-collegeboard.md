@@ -12,4 +12,4 @@ image: images/collegeboard.png
 
 # Collegeboard Unit Notes
 
-- Filler
+- [Notes Test]({{site.baseurl}}/_posts/2022-08-29-testnotes.md)
