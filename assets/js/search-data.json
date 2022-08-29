@@ -3,9 +3,9 @@
     
         "post0": {
             "title": "Java Primitives Notebook",
-            "content": "public class kitkatwrapper{ int anInt = 100; double aDouble = 111.11; boolean aBoolean = true; String aString = &quot;banana&quot;; String uhString = new String (&quot;Banana&quot;); } System.out.println(anInt); System.out.println(aDouble); System.out.println(aBoolean); System.out.println(aString); System.out.println(uhString); . 100 111.11 true banana Banana .",
-            "url": "https://prorichyman.github.io/CSA-Fastpages/codecodecode/2022/08/22/javaclasses.html",
-            "relUrl": "/codecodecode/2022/08/22/javaclasses.html",
+            "content": "Define in a Class the following data types | Demonstrate use of Primitives: int, double, boolean, string | Demonstrate use of Wrapper Class object: String | Describe in comments how each data type choice is appropriate to application | Perform arithmetic expressions and assignment in a program code Code.org Lesson | Determine what is result is in a variable as a result of an data type and expression (ie integer vs double) | Perform an arithmetic expressions that uses casting, add comments that show how it produces desired result. Learn more by watching this College Board video | Perform compound assignment operator (ie +=), add comments to describe the result of operator | . Code below, Collaborated with Don Tran . import java.util.Scanner; public class Kitkatwrapper{ public static void main(String[] args) { Scanner myObj = new Scanner(System.in); // Create a Scanner object System.out.println(&quot;Enter a salary between 0-1,000,000&quot;); // Number 1, gets salary double salary = myObj.nextDouble(); // Read user input double oldSalary = salary; // records oldsalary for percent calculation later System.out.println(&quot;Enter your pay raise&quot;); // Number 2, gets raise to salary double raise = myObj.nextDouble(); // Read user input salary += raise; // the inputted number of &quot;raise&quot; is added onto the original inputted &quot;salary&quot; int percent = (int) (100*(salary / oldSalary)-100); // calculates percent raise myObj.close(); // closing object, stops reading text inputs boolean payraisequality; // defines boolean variable String message; // defines message if(percent &gt; 5){ payraisequality = true; } else{ payraisequality = false; } if (payraisequality == true){ message = &quot;You got a good pay raise!&quot;; } else{ message = &quot;You got a bad pay raise.&quot;; } System.out.println(&quot;Your final salary is: &quot; + salary + &quot;, which is around a &quot; + percent + &quot;% raise from your original salary. &quot; + message); // Output user input } } Kitkatwrapper.main(null); . Enter a salary between 0-1,000,000 Enter your pay raise Your final salary is: 11000.0, which is around a 10% raise from your original salary. You got a good pay raise! .",
+            "url": "https://prorichyman.github.io/CSA-Fastpages/keylearnings/2022/08/22/javaclasses.html",
+            "relUrl": "/keylearnings/2022/08/22/javaclasses.html",
             "date": " • Aug 22, 2022"
         }
         
@@ -36,7 +36,7 @@
     
         ,"post3": {
             "title": "Java Notebook",
-            "content": "System.out.println(&quot;Hello&quot;); . Hello .",
+            "content": "System.out.println(&quot;Hello&quot;); int a = 3; int b = 10; double c = 2.5; c = 2 * a - 15 / b + c; System.out.println(c); . Hello 1.0 .",
             "url": "https://prorichyman.github.io/CSA-Fastpages/codecodecode/2022/08/20/java.html",
             "relUrl": "/codecodecode/2022/08/20/java.html",
             "date": " • Aug 20, 2022"
