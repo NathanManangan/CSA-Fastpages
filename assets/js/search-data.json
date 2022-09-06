@@ -4,8 +4,8 @@
         "post0": {
             "title": "Code Proof and Learnings",
             "content": "Key Learnings . Creating Objects . I learned about creating objects in Java for the first time, and some new knowledge that I have taken into my little tiny brain, are a few things. I learned that creating objects in Java is very similar to creating objects in JavaScript. Creating an object that already has methods built inside of it, can then be used to perform methods using &quot;objectName.&quot;. The methods also use &quot;this.&quot; to create a method for any object that it will be used for. . // Blah blah blah class header Painter myPainter = new Painter; // creating new object . Or things like . // Blah blah blah creating method this.method(); // referring to current object . I also learned that extending something is just creating a subclass of the main &quot;super&quot; class. For example, . public class Banana extends Fruit; // Banana is a subclass of fruit .",
-            "url": "https://prorichyman.github.io/CSA-Fastpages/keylearnings/2022/09/05/python.html",
-            "relUrl": "/keylearnings/2022/09/05/python.html",
+            "url": "https://prorichyman.github.io/CSA-Fastpages/keylearnings/2022/09/05/codeorg.html",
+            "relUrl": "/keylearnings/2022/09/05/codeorg.html",
             "date": " • Sep 5, 2022"
         }
         
