@@ -12,3 +12,12 @@ _notebooks/.ipynb_checkpoints
 .netlify
 .tweet-cache
 __pycache__
+Gemfile.lock
+settings.ini
+_posts/2020-02-20-test.md
+_posts/2022-08-20-java.md
+_posts/2022-08-20-python.md
+_posts/2022-08-22-javaclasses.md
+_posts/2022-08-29-bash.md
+_posts/2022-09-05-menu.md
+images/copied_from_nb/my_icons/fastai_logo.png
