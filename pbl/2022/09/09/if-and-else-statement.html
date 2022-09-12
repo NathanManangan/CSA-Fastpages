@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>If Else Statements and Boolean Logic | Nathan’s Fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="If Else Statements and Boolean Logic" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The logic behind booleans if else statements switch case and De Morgan’s Law" />
+<meta property="og:description" content="The logic behind booleans if else statements switch case and De Morgan’s Law" />
+<link rel="canonical" href="https://prorichyman.github.io/CSA-Fastpages/pbl/2022/09/09/if-and-else-statement.html" />
+<meta property="og:url" content="https://prorichyman.github.io/CSA-Fastpages/pbl/2022/09/09/if-and-else-statement.html" />
+<meta property="og:site_name" content="Nathan’s Fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-09T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="If Else Statements and Boolean Logic" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-09T00:00:00-05:00","datePublished":"2022-09-09T00:00:00-05:00","description":"The logic behind booleans if else statements switch case and De Morgan’s Law","headline":"If Else Statements and Boolean Logic","mainEntityOfPage":{"@type":"WebPage","@id":"https://prorichyman.github.io/CSA-Fastpages/pbl/2022/09/09/if-and-else-statement.html"},"url":"https://prorichyman.github.io/CSA-Fastpages/pbl/2022/09/09/if-and-else-statement.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/CSA-Fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://prorichyman.github.io/CSA-Fastpages/feed.xml" title="Nathan's Fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/CSA-Fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/CSA-Fastpages/">Nathan&#39;s Fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/CSA-Fastpages/about/">About Me</a><a class="page-link" href="/CSA-Fastpages/search/">Search</a><a class="page-link" href="/CSA-Fastpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">If Else Statements and Boolean Logic</h1><p class="page-description">The logic behind booleans if else statements switch case and De Morgan's Law</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-09T00:00:00-05:00" itemprop="datePublished">
+        Sep 9, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      6 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/CSA-Fastpages/categories/#PBL">PBL</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/ProRichyMan/CSA-Fastpages/tree/master/_notebooks/2022-09-09-if-and-else-statement.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/CSA-Fastpages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/ProRichyMan/CSA-Fastpages/master?filepath=_notebooks%2F2022-09-09-if-and-else-statement.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/CSA-Fastpages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/ProRichyMan/CSA-Fastpages/blob/master/_notebooks/2022-09-09-if-and-else-statement.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/CSA-Fastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FProRichyMan%2FCSA-Fastpages%2Fblob%2Fmaster%2F_notebooks%2F2022-09-09-if-and-else-statement.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/CSA-Fastpages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Booleans">Booleans </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Boolean-Operators">Boolean Operators </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#If-and-Else-Statements">If and Else Statements </a></li>
+<li class="toc-entry toc-h2"><a href="#Switch-Case-Statements">Switch Case Statements </a></li>
+<li class="toc-entry toc-h2"><a href="#De-Morgan's-Law">De Morgan&#39;s Law </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-09-09-if-and-else-statement.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Booleans">
+<a class="anchor" href="#Booleans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Booleans<a class="anchor-link" href="#Booleans"> </a>
+</h2>
+<p>Booleans are one of the primitive data types that Java supports and are an integral data type to all of computer science. In fact, it's the idea of booleans that actually makes up an integral part of computers which we know as 0s and 1s (on or off) which in computer speak is called binary.</p>
+<p>Established by 19th century mathematician George Bool, booleans are at its core data for logic simply put in two types: true or false. With this you can create a complex structure of computing code and all other manners of code.</p>
+<p>Let's see how they are when we assign them as variables!</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">boolean</span> <span class="n">a</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kt">boolean</span> <span class="n">b</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"variable a: "</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s">"\nvariable b: "</span> <span class="o">+</span> <span class="n">b</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>variable a: true
+variable b: false
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Boolean-Operators">
+<a class="anchor" href="#Boolean-Operators" aria-hidden="true"><span class="octicon octicon-link"></span></a>Boolean Operators<a class="anchor-link" href="#Boolean-Operators"> </a>
+</h3>
+<p>Booleans, interestingly enough, have operators to them just as math does. The most common operators you'll hear about are the comparison operators: and (&amp;&amp;), or (||), &gt;, &lt;, &gt;=, &lt;=, ==. Another common operator is not (!).</p>
+<p>The and operator compares two boolean statements and if both are true, then it will return true, otherwise all other combinations of the boolean statements return false.</p>
+<p>The or operator also compares two boolean statements and if one of them is true, it returns true while if both of them is false, it will return false.</p>
+<p>The not operator is applied to a boolean statement and switches true to false and false to true.</p>
+<p>Let's see them in action!</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// examples of some of the operators</span>
+<span class="kt">boolean</span> <span class="n">a</span> <span class="o">=</span> <span class="kc">true</span> <span class="o">&amp;&amp;</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kt">boolean</span> <span class="n">b</span> <span class="o">=</span> <span class="kc">false</span> <span class="o">&amp;&amp;</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kt">boolean</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">&gt;=</span> <span class="mi">19</span><span class="p">;</span>
+<span class="kt">boolean</span> <span class="n">d</span> <span class="o">=</span> <span class="mi">42</span> <span class="o">&lt;</span> <span class="mi">23</span><span class="p">;</span>
+<span class="kt">boolean</span> <span class="n">e</span> <span class="o">=</span> <span class="o">!</span><span class="n">b</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"variable a: "</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s">"\nvariable b: "</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="s">"\nvariable c: "</span> <span class="o">+</span> <span class="n">c</span> <span class="o">+</span> <span class="s">"\nvariable d: "</span> <span class="o">+</span> <span class="n">d</span> <span class="o">+</span> <span class="s">"\nvariable e: "</span> <span class="o">+</span> <span class="n">e</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>variable a: true
+variable b: false
+variable c: true
+variable d: false
+variable e: true
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="If-and-Else-Statements">
+<a class="anchor" href="#If-and-Else-Statements" aria-hidden="true"><span class="octicon octicon-link"></span></a>If and Else Statements<a class="anchor-link" href="#If-and-Else-Statements"> </a>
+</h2>
+<p>If statements are, at their core, statements that check the conditions of true or false. If a condition is true, it will perform an action/line of code, if it is false, it will skip over the action/code block under the if statement.</p>
+<p>An Else statements is an action/code block that performs if the condition for the if statement is not true.</p>
+<p>An Else If statement is a combination of If and Else statements where if a condition is not true, it will move into the else statement which has another if statement. At its core. it is a nested If Else statement.</p>
+<p>Let's see them in action.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">){</span> <span class="c1">//since a is greater than c, the else statement is ignored</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">c</span><span class="p">){</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"c is the largest number"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span><span class="p">{</span> <span class="c1">//since a is greater than c, the else statement's code block is called because the if statement is false</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"a is the largest number"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">&lt;</span> <span class="n">c</span><span class="p">){</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"c is the largest number"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span><span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"b is the largest number"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>a is the largest number
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Switch-Case-Statements">
+<a class="anchor" href="#Switch-Case-Statements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Switch Case Statements<a class="anchor-link" href="#Switch-Case-Statements"> </a>
+</h2>
+<p>Switch Case Statements help simplify/manage the complexity of if else statements which can in many circumstance become overly long especially when comparing by a case by case basis.</p>
+<p>It works by stating a variety of Case statements which all have conditions. The code blocks under each case are then run if the condition to one of the cases is met. Just like if else statements, Switch Case statements will go down each case to see if a conditon is met. If it is met, the case's block of code will run and ignore the rest of the Switch Case statements.</p>
+<p>In the examples below, the first will be a chain of If Else statements while the second example will use switch case to demonstrate how Switch Case statements simplify multiple If Else statements.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">4</span><span class="p">){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"4 is considered unlucky in Japan because of its pronounciation's (shi) similarity to the word for death."</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">7</span><span class="p">){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"7 is considered lucky in many cultures because its believed to be associated with its propagation as a positive value in folklores and myths."</span><span class="p">);</span>  
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">8</span><span class="p">){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"8 is considered a lucky number in China and Japan because of its relation to the word for prosperity in their cultures."</span><span class="p">);</span>  
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">9</span><span class="p">){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"9 is considered unlucky in both China and Japan because both associate it with the word for sorrow, grief, and suffering."</span><span class="p">);</span> 
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">13</span><span class="p">){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"13 is considered unlucky in Western society due to its association with the Christian Bible where the 13th to sit at the Last Supper was Judas who is known as the betrayer of Jesus Christ."</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>7 is considered lucky in many cultures because its believed to be associated with its propagation as a positive value in folklores and myths.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">output</span><span class="p">;</span>
+
+<span class="k">switch</span> <span class="p">(</span><span class="n">n</span><span class="p">){</span> <span class="c1">//variable passed in</span>
+    <span class="k">case</span> <span class="mi">4</span><span class="p">:</span> <span class="c1">//condition checked if equals</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="s">"4 is considered unlucky in Japan because of its pronounciation's (shi) similarity to the word for death."</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">7</span><span class="p">:</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="s">"7 is considered lucky in many cultures because its believed to be associated with its propagation as a positive value in folklores and myths."</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">8</span><span class="p">:</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="s">"8 is considered a lucky number in China and Japan because of its relation to the word for prosperity in their cultures."</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">9</span><span class="p">:</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="s">"9 is considered unlucky in both China and Japan because both associate it with the word for sorrow, grief, and suffering."</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">13</span><span class="p">:</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="s">"13 is considered unlucky in Western society due to its association with the Christian Bible where the 13th to sit at the Last Supper was Judas who is known as the betrayer of Jesus Christ."</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">output</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>7 is considered lucky in many cultures because its believed to be associated with its propagation as a positive value in folklores and myths.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="De-Morgan's-Law">
+<a class="anchor" href="#De-Morgan's-Law" aria-hidden="true"><span class="octicon octicon-link"></span></a>De Morgan's Law<a class="anchor-link" href="#De-Morgan's-Law"> </a>
+</h2>
+<p>De Morgan's Law states that in a boolean statement, the not operator ! will reverse all the operators in that statement. For instance, true becomes false, false becomes true, and becomes or, or becomes and, &gt; becomes &lt;=, &lt;= becomes &gt;, etc. A tangible example of this is 'I will not drink water and eat a table' which means the same thing as 'I will either not drink water or eat a table.'</p>
+<p>Here's some examples!</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">boolean</span> <span class="n">a</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kt">boolean</span> <span class="n">b</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">A</span> <span class="o">&amp;&amp;</span> <span class="n">B</span><span class="p">)){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"A and B both are false"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"A and B are true"</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>A and B are true
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">A</span> <span class="o">||</span> <span class="o">!</span><span class="n">B</span><span class="p">){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"A and B both are false"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"A and B are true"</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>A and B are true
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As shown above, both statements are equal given De Morgan's Law. It's important because of how they can break inversions as a complement of a complex boolean expression.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="ProRichyMan/CSA-Fastpages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/CSA-Fastpages/pbl/2022/09/09/if-and-else-statement.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/CSA-Fastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/CSA-Fastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/CSA-Fastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>A blogging platform for AP CSA assignments.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/CSA-Fastpages/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/CSA-Fastpages/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
