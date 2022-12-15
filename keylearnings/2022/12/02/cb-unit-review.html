@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      11 min read
     
 </span></p>
 
@@ -163,6 +163,10 @@ window.onload = wrap_img;
 </ul>
 </li>
 <li class="toc-entry toc-h3"><a href="#Unit-6-Arrays">Unit 6 Arrays </a></li>
+<li class="toc-entry toc-h3"><a href="#Unit-7-ArrayLists">Unit 7 ArrayLists </a></li>
+<li class="toc-entry toc-h3"><a href="#Unit-8-2D-Arrays">Unit 8 2D Arrays </a></li>
+<li class="toc-entry toc-h3"><a href="#Unit-9-Inheritance">Unit 9 Inheritance </a></li>
+<li class="toc-entry toc-h3"><a href="#Unit-10-Recursion">Unit 10 Recursion </a></li>
 </ul>
 </li>
 </ul><!--
@@ -211,18 +215,58 @@ window.onload = wrap_img;
 </tr>
 <tr>
 <td>Unit 5</td>
-<td>NONE</td>
-<td>OUR OWN LESSON - NO SCORE?</td>
-</tr>
-<tr>
-<td>Unit 6</td>
-<td>NONE</td>
-<td>UNKNOWN</td>
+<td>1/1</td>
+<td>OUR OWN LESSON - FULL SCORE</td>
 </tr>
 <tr>
 <td>TOTAL SCORE</td>
-<td>3.85/4</td>
+<td>4.85/5</td>
 <td>2 Unknown ones</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p></p>
+<hr>
+<br>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>Score</th>
+<th>Grading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unit 6</td>
+<td>0.9/1</td>
+<td><a href="https://docs.google.com/spreadsheets/d/1Hlh7VScUFSnHA3lovNoh1ao-QZu3vVuH_uCSw0tOoFU/edit#gid=0">Link</a></td>
+</tr>
+<tr>
+<td>Unit 7</td>
+<td>0.8/1 (late)</td>
+<td><a href="https://docs.google.com/spreadsheets/d/1fe9gmbCkbB4ayEeo3xMYLjx1U96LZ4JjwGOvEHX2O0M/edit#gid=0">Link</a></td>
+</tr>
+<tr>
+<td>Unit 8</td>
+<td>0.95/1</td>
+<td><a href="https://aaditgupta21.github.io/fastpages-CSA/2022/12/14/Unit8Grading.html">Link</a></td>
+</tr>
+<tr>
+<td>Unit 9</td>
+<td>1/1</td>
+<td><a href="https://docs.google.com/spreadsheets/d/1aPcCRONduEfKhgB69PHXTSY877S1h0V8AomY5OW_THs/edit#gid=0">Link</a></td>
+</tr>
+<tr>
+<td>Unit 10</td>
+<td>0.9/1</td>
+<td><a href="https://docs.google.com/spreadsheets/d/1ucOgxEYKWkggvw7SJ3TuuPXu0ElscD8unKX-RNxB3No/edit#gid=0">Link</a></td>
+</tr>
+<tr>
+<td>TOTAL SCORE</td>
+<td>4.55/5</td>
+<td>-----</td>
 </tr>
 </tbody>
 </table>
@@ -1117,6 +1161,363 @@ enhanced for loop .. for (int element:values)</p>
 
 <span class="n">ArrayMethods</span><span class="p">.</span><span class="na">swap</span><span class="p">();</span>
 <span class="n">ArrayMethods</span><span class="p">.</span><span class="na">replaceZero</span><span class="p">();</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0th Index = 1
+4th Index = 5
+0th Index = 5
+4th Index = 1
+50301</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Unit-7-ArrayLists">
+<a class="anchor" href="#Unit-7-ArrayLists" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit 7 ArrayLists<a class="anchor-link" href="#Unit-7-ArrayLists"> </a>
+</h3>
+<p>An ArrayList is like an array but the length can be changed. For ArrayList you must use a wrapper class rather than a primitive Due to ArrayList using generics. ArrayList can also work with enhanced for loops and have many convenient functions.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// using "Integer" wrapper class</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">listOfIntegers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="c1">// Explicitly creating integer</span>
+<span class="n">listOfIntegers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Integer</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span>
+
+<span class="c1">// automatically converts to Integer</span>
+<span class="n">listOfIntegers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="c1">// using toString method of ArrayList</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">listOfIntegers</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Unit-8-2D-Arrays">
+<a class="anchor" href="#Unit-8-2D-Arrays" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit 8 2D Arrays<a class="anchor-link" href="#Unit-8-2D-Arrays"> </a>
+</h3>
+<p>Arrays can be placed inside arrays, creating 2D array. Useful for representing 2d space, or text (as 2d). Defined by using two pairs of square brackets after the type. Can be traversed using nested for loop. Concept of putting one for loop inside another. Really useful for traversing 2d arrays.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AaditGupta</span> <span class="p">{</span>
+    <span class="kt">int</span><span class="o">[][]</span> <span class="n">bananas</span> <span class="o">=</span> <span class="p">{{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">},</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">},</span> <span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">}};</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">regular</span><span class="p">(){</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Regular Array - Unaltered"</span><span class="p">);</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">bananas</span><span class="p">.</span><span class="na">length</span> <span class="o">&gt;</span> <span class="n">i</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">bananas</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">bananas</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">mixmix</span><span class="p">(){</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">a</span> <span class="o">=</span> <span class="n">bananas</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">b</span> <span class="o">=</span> <span class="n">bananas</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">;</span>
+        <span class="n">bananas</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+        <span class="n">bananas</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Array - Reversed"</span><span class="p">);</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">bananas</span><span class="p">.</span><span class="na">length</span> <span class="o">&gt;</span> <span class="n">i</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">bananas</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">bananas</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">bananas</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+        <span class="n">bananas</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">input</span><span class="p">(){</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Array - Input display"</span><span class="p">);</span>
+        <span class="n">Scanner</span> <span class="n">myObj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Enter row (integer)"</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="n">myObj</span><span class="p">.</span><span class="na">nextInt</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// Read user input</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Enter column (integer)"</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">column</span> <span class="o">=</span> <span class="n">myObj</span><span class="p">.</span><span class="na">nextInt</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// Read user input</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Row: "</span> <span class="o">+</span> <span class="p">(</span><span class="n">row</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s">" | Column: "</span> <span class="o">+</span> <span class="p">(</span><span class="n">column</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s">" | Number: "</span> <span class="o">+</span><span class="n">bananas</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">column</span><span class="o">]</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">multiply</span><span class="p">(){</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Array - Sum of Products of Rows"</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">boolean</span> <span class="n">first</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">bananas</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">bananas</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">first</span> <span class="o">==</span> <span class="kc">true</span><span class="p">){</span>
+                    <span class="n">a</span> <span class="o">+=</span> <span class="n">bananas</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+                    <span class="n">first</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="k">else</span><span class="p">{</span>
+                    <span class="n">a</span> <span class="o">*=</span> <span class="n">bananas</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="n">sum</span> <span class="o">+=</span> <span class="n">a</span><span class="p">;</span>
+            <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">first</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="c1">// 6, 120, 504</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Sum = "</span> <span class="o">+</span> <span class="n">sum</span><span class="p">);</span> <span class="c1">// 630</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">AaditGupta</span> <span class="n">aaditGupta</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AaditGupta</span><span class="p">();</span>
+        <span class="n">aaditGupta</span><span class="p">.</span><span class="na">regular</span><span class="p">();</span>
+        <span class="n">aaditGupta</span><span class="p">.</span><span class="na">mixmix</span><span class="p">();</span>
+        <span class="n">aaditGupta</span><span class="p">.</span><span class="na">input</span><span class="p">();</span>
+        <span class="n">aaditGupta</span><span class="p">.</span><span class="na">multiply</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">AaditGupta</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Regular Array - Unaltered
+123 
+456 
+789 
+ 
+Array - Reversed
+789 
+456 
+123 
+ 
+Array - Input display
+Enter row (integer)
+Enter column (integer)
+Row: 1 | Column: 1 | Number: 1
+ 
+Array - Sum of Products of Rows
+Sum = 630
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Unit-9-Inheritance">
+<a class="anchor" href="#Unit-9-Inheritance" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit 9 Inheritance<a class="anchor-link" href="#Unit-9-Inheritance"> </a>
+</h3>
+<p>Inheritance can be used when two classes share similar functionality. Allows super class to have base functionality (ie. car). Sub class adds additional functionality to the base (ie. tesla car) "extends" and "abstract" keywords can be used to define inheritance in Java.</p>
+<p>Extends key word
+Defines a sub class that inherits all the methods from the super class. Useful because you don't need to redefine everything from super class.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="p">{</span>
+    <span class="kd">protected</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+    <span class="kd">protected</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">;</span>
+ 
+    <span class="kd">public</span> <span class="nf">Person</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">){</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">birthday</span> <span class="o">=</span> <span class="n">birthday</span><span class="p">;</span>
+    <span class="p">}</span>
+ 
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">(){</span>
+       <span class="k">return</span> <span class="n">name</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getAge</span><span class="p">()</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="mi">2022</span> <span class="o">-</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">birthday</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="s">"Person (name: "</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">", birthday: "</span> <span class="o">+</span> <span class="n">birthday</span> <span class="o">+</span> <span class="s">")"</span><span class="p">;</span>
+    <span class="p">}</span>
+ <span class="p">}</span>
+ 
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="kd">extends</span> <span class="n">Person</span> <span class="p">{</span> <span class="c1">// extends</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">grade</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">gpa</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">coding</span><span class="p">;</span>
+ 
+    <span class="kd">public</span> <span class="nf">Student</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">,</span> <span class="kt">int</span> <span class="n">grade</span><span class="p">,</span> <span class="kt">double</span> <span class="n">gpa</span><span class="p">,</span> <span class="n">String</span> <span class="n">coding</span><span class="p">)</span> <span class="p">{</span>
+       <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">birthday</span><span class="p">);</span> <span class="c1">// use of super()</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">grade</span> <span class="o">=</span> <span class="n">grade</span><span class="p">;</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">gpa</span> <span class="o">=</span> <span class="n">gpa</span><span class="p">;</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">coding</span> <span class="o">=</span> <span class="n">coding</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// return gpa</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getGPA</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">gpa</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">coding</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">coding</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// return grade</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getGrade</span><span class="p">(){</span>
+       <span class="k">return</span> <span class="n">grade</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span> <span class="c1">// override override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="s">"Student (name: "</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">", birthday: "</span> <span class="o">+</span> <span class="n">birthday</span> <span class="o">+</span> <span class="s">", coding: "</span> <span class="o">+</span> <span class="n">coding</span> <span class="o">+</span> <span class="s">", gpa:"</span> <span class="o">+</span> <span class="n">gpa</span> <span class="o">+</span> <span class="s">", grade: "</span> <span class="o">+</span> <span class="n">grade</span> <span class="o">+</span> <span class="s">")"</span><span class="p">;</span>
+    <span class="p">}</span>
+ <span class="p">}</span>
+
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Teacher</span> <span class="kd">extends</span> <span class="n">Person</span> <span class="p">{</span>
+      <span class="kd">private</span> <span class="n">String</span> <span class="n">subject</span><span class="p">;</span>
+      <span class="kd">private</span> <span class="n">String</span> <span class="n">degree</span><span class="p">;</span>
+   
+      <span class="kd">public</span> <span class="nf">Teacher</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">,</span> <span class="n">String</span> <span class="n">subject</span><span class="p">,</span> <span class="n">String</span> <span class="n">degree</span><span class="p">)</span> <span class="p">{</span>
+         <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">birthday</span><span class="p">);</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">subject</span> <span class="o">=</span> <span class="n">subject</span><span class="p">;</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">degree</span> <span class="o">=</span> <span class="n">degree</span><span class="p">;</span>
+      <span class="p">}</span>
+   
+      <span class="c1">// return subject</span>
+      <span class="kd">public</span> <span class="n">String</span> <span class="nf">getSubject</span><span class="p">()</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="n">subject</span><span class="p">;</span>
+      <span class="p">}</span>
+
+   
+      <span class="c1">// return degree</span>
+      <span class="kd">public</span> <span class="n">String</span> <span class="nf">getDegree</span><span class="p">()</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="n">degree</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="nd">@Override</span>
+      <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="s">"Teacher (name: "</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">", birthday: "</span> <span class="o">+</span> <span class="n">birthday</span> <span class="o">+</span> <span class="s">", subject: "</span> <span class="o">+</span> <span class="n">subject</span> <span class="o">+</span> <span class="s">", degree: "</span> <span class="o">+</span> <span class="n">degree</span> <span class="o">+</span> <span class="s">")"</span><span class="p">;</span>
+      <span class="p">}</span>
+ <span class="p">}</span>
+
+<span class="n">Person</span> <span class="n">johnnysins</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Person</span><span class="p">(</span><span class="s">"Johnny Sins"</span><span class="p">,</span> <span class="s">"1985"</span><span class="p">);</span>
+<span class="n">Person</span> <span class="n">don</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Student</span><span class="p">(</span><span class="s">"Don"</span><span class="p">,</span> <span class="s">"2005"</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="s">"true"</span><span class="p">);</span>
+<span class="n">Person</span> <span class="n">mortensen</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Teacher</span><span class="p">(</span><span class="s">"Mortensen"</span><span class="p">,</span> <span class="s">"Since Forever"</span><span class="p">,</span> <span class="s">"CODE CODE CODE"</span><span class="p">,</span> <span class="s">"IDK lmao"</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">don</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">johnnysins</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">mortensen</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Student (name: Don, birthday: 2005, coding: true, gpa:5.0, grade: 11)
+Person (name: Johnny Sins, birthday: 1985)
+Teacher (name: Mortensen, birthday: Since Forever, subject: CODE CODE CODE, degree: IDK lmao)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Unit-10-Recursion">
+<a class="anchor" href="#Unit-10-Recursion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit 10 Recursion<a class="anchor-link" href="#Unit-10-Recursion"> </a>
+</h3>
+<p>Recursion can be used in situations where you need to repeatedly do something, instead of loops. Recursion must call itself and have a base case. Base case allows the recursion to end at some point.</p>
+<p>Big O notation for Hash map, Binary Search, Single loop, Nested Loop
+Used to describe the most time it would take for a function to run (without constants). For example, the recursion below would take O(n) time as it has to go through n iterations to calculate the factorial.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">factorial</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+  
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span>
 </pre></div>
 
     </div>
