@@ -7,7 +7,7 @@
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -75,44 +75,23 @@
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Welcome to Java program to add two binary numbers"</span><span class="p">);</span> 
         <span class="n">Scanner</span> <span class="n">scnr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>  <span class="c1">// scanner</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Please enter first binary number"</span><span class="p">);</span> <span class="c1">// first num</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">scnr</span><span class="p">.</span><span class="na">nextLine</span><span class="p">()</span> <span class="o">==</span> <span class="s">"1"</span> <span class="o">||</span> <span class="n">scnr</span><span class="p">.</span><span class="na">nextLine</span><span class="p">()</span> <span class="o">==</span> <span class="s">"0"</span><span class="p">){</span>
-            <span class="n">String</span> <span class="n">first</span> <span class="o">=</span> <span class="n">scnr</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span> 
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">first</span><span class="p">);</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Please enter second binary number"</span><span class="p">);</span> <span class="c1">// second num</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">scnr</span><span class="p">.</span><span class="na">nextLine</span><span class="p">()</span> <span class="o">==</span> <span class="s">"1"</span> <span class="o">||</span> <span class="n">scnr</span><span class="p">.</span><span class="na">nextLine</span><span class="p">()</span> <span class="o">==</span> <span class="s">"0"</span><span class="p">){</span>
-                <span class="n">String</span> <span class="n">second</span> <span class="o">=</span> <span class="n">scnr</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span> 
-                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">second</span><span class="p">);</span>
-                <span class="n">String</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">sum</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">);</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Sum of two binary number is : "</span> <span class="o">+</span> <span class="n">sum</span><span class="p">);</span> 
-                <span class="n">scnr</span><span class="p">.</span><span class="na">close</span><span class="p">();</span> 
-            <span class="p">}</span>
-            <span class="k">else</span><span class="p">{</span>
-                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Invalid input, please type in a '1' or a '0' "</span><span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="k">else</span><span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Invalid input, please type in a '1' or a '0' "</span><span class="p">);</span>
-        <span class="p">}</span>
+        <span class="n">String</span> <span class="n">first</span> <span class="o">=</span> <span class="n">scnr</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">first</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Please enter second binary number"</span><span class="p">);</span> <span class="c1">// second num</span>
+        <span class="n">String</span> <span class="n">second</span> <span class="o">=</span> <span class="n">scnr</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span> 
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">second</span><span class="p">);</span>
+
+        <span class="n">String</span> <span class="n">addition</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">);</span> 
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Sum of the two binary numbers is : "</span> <span class="o">+</span> <span class="n">addition</span><span class="p">);</span>
+        <span class="n">scnr</span><span class="p">.</span><span class="na">close</span><span class="p">();</span> 
     <span class="p">}</span> 
+    
     <span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">add</span><span class="p">(</span><span class="n">String</span> <span class="n">first</span><span class="p">,</span> <span class="n">String</span> <span class="n">second</span><span class="p">)</span> <span class="p">{</span> 
         <span class="kt">int</span> <span class="n">b1</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> 
         <span class="kt">int</span> <span class="n">b2</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">second</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> 
         <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">b1</span> <span class="o">+</span> <span class="n">b2</span><span class="p">;</span> 
         <span class="k">return</span> <span class="n">Integer</span><span class="p">.</span><span class="na">toBinaryString</span><span class="p">(</span><span class="n">sum</span><span class="p">);</span> 
     <span class="p">}</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">sum</span><span class="p">(</span><span class="n">String</span> <span class="n">b1</span><span class="p">,</span> <span class="n">String</span> <span class="n">b2</span><span class="p">)</span> <span class="p">{</span> 
-        <span class="kt">int</span> <span class="n">len1</span> <span class="o">=</span> <span class="n">b1</span><span class="p">.</span><span class="na">length</span><span class="p">();</span> 
-        <span class="kt">int</span> <span class="n">len2</span> <span class="o">=</span> <span class="n">b2</span><span class="p">.</span><span class="na">length</span><span class="p">();</span> 
-        <span class="kt">int</span> <span class="n">carry</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> 
-        <span class="n">String</span> <span class="n">res</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">maxLen</span> <span class="o">=</span> <span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">len1</span><span class="p">,</span> <span class="n">len2</span><span class="p">);</span> <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">maxLen</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> 
-            <span class="kt">int</span> <span class="n">p</span> <span class="o">=</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len1</span> <span class="o">?</span> <span class="n">b1</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">len1</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="sc">'0'</span> <span class="p">:</span> <span class="mi">0</span><span class="p">;</span> 
-            <span class="kt">int</span> <span class="n">q</span> <span class="o">=</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len2</span> <span class="o">?</span> <span class="n">b2</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">len2</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="sc">'0'</span> <span class="p">:</span> <span class="mi">0</span><span class="p">;</span> 
-            <span class="kt">int</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">p</span> <span class="o">+</span> <span class="n">q</span> <span class="o">+</span> <span class="n">carry</span><span class="p">;</span> 
-            <span class="n">carry</span> <span class="o">=</span> <span class="n">tmp</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span> 
-            <span class="n">res</span> <span class="o">=</span> <span class="n">tmp</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">res</span><span class="p">;</span> 
-        <span class="p">}</span> 
-        <span class="k">return</span> <span class="p">(</span><span class="n">carry</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="n">res</span> <span class="p">:</span> <span class="s">"1"</span> <span class="o">+</span> <span class="n">res</span><span class="p">;</span> 
-    <span class="p">}</span> 
     
 <span class="p">}</span>
 <span class="n">Main</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
@@ -130,7 +109,216 @@
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Welcome to Java program to add two binary numbers
 Please enter first binary number
-Invalid input, please type in a '1' or a '0' 
+101
+Please enter second binary number
+1
+Sum of the two binary numbers is : 110
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">IntegerByValueOrReference</span> <span class="p">{</span>
+    
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">changeInteger</span><span class="p">(</span><span class="n">Integer</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"In changeInteger method"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\tBefore change: n = "</span> <span class="o">+</span> 
+                            <span class="n">n</span> <span class="o">+</span> <span class="c1">// prints 5</span>
+                            <span class="s">" hash code = "</span> <span class="o">+</span> 
+                            <span class="n">n</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span> 
+
+        <span class="n">n</span> <span class="o">+=</span> <span class="mi">10</span><span class="p">;</span>  <span class="c1">// behind the scenes, this is:  n = new Integer(n+10)</span>
+        
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\tAfter change: n = "</span> <span class="o">+</span> 
+                            <span class="n">n</span> <span class="o">+</span> <span class="c1">// prints 15</span>
+                            <span class="s">" hash code = "</span> <span class="o">+</span> 
+                            <span class="n">n</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span> 
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Integer</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Main method before changeInteger(n): n = "</span> <span class="o">+</span> 
+                            <span class="n">n</span> <span class="o">+</span> <span class="c1">// prints 5</span>
+                            <span class="s">" hash code = "</span> <span class="o">+</span> 
+                            <span class="n">n</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span> 
+
+        <span class="n">changeInteger</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+        
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Main method after changeInteger(n): n = "</span> <span class="o">+</span> 
+                            <span class="n">n</span> <span class="o">+</span>  <span class="c1">// now prints 15</span>
+                            <span class="s">" hash code = "</span> <span class="o">+</span> 
+                            <span class="n">n</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span>     
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">IntegerByValueOrReference</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Main method before changeInteger(n): n = 5 hash code = 5
+In changeInteger method
+	Before change: n = 5 hash code = 5
+	After change: n = 15 hash code = 15
+Main method after changeInteger(n): n = 5 hash code = 5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.concurrent.atomic.AtomicInteger</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PassByReference</span> <span class="p">{</span>
+    
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">changeAtomicInteger</span><span class="p">(</span><span class="n">AtomicInteger</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"In changeAtomicInteger method"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\tBefore change: n = "</span> <span class="o">+</span> 
+                            <span class="n">n</span> <span class="o">+</span> <span class="c1">// prints 5</span>
+                            <span class="s">" hash code = "</span> <span class="o">+</span> 
+                            <span class="n">n</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span> 
+        <span class="n">n</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">n</span><span class="p">.</span><span class="na">get</span><span class="p">()</span> <span class="o">+</span> <span class="mi">10</span><span class="p">);</span>  <span class="c1">// at this point, we are clearly working with reference data type</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\tAfter change: n = "</span> <span class="o">+</span> 
+                            <span class="n">n</span> <span class="o">+</span> <span class="c1">// prints 15</span>
+                            <span class="s">" hash code = "</span> <span class="o">+</span> 
+                            <span class="n">n</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span> 
+<span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">AtomicInteger</span> <span class="n">n</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicInteger</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span> <span class="c1">// unlike conventional wrapper class, this requires new</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Main method before changeAtomicInteger(n): n = "</span> <span class="o">+</span> 
+                            <span class="n">n</span> <span class="o">+</span> <span class="c1">// prints 5</span>
+                            <span class="s">" hash code = "</span> <span class="o">+</span> 
+                            <span class="n">n</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span> 
+        <span class="n">changeAtomicInteger</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Main method after changeAtomicInteger(n): n = "</span> <span class="o">+</span> 
+                            <span class="n">n</span> <span class="o">+</span>  <span class="c1">// now prints 15</span>
+                            <span class="s">" hash code = "</span> <span class="o">+</span> 
+                            <span class="n">n</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span> 
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">PassByReference</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Main method before changeAtomicInteger(n): n = 5 hash code = 1406789576
+In changeAtomicInteger method
+	Before change: n = 5 hash code = 1406789576
+	After change: n = 15 hash code = 1406789576
+Main method after changeAtomicInteger(n): n = 15 hash code = 1406789576
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">IntByReference</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">value</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">IntByReference</span><span class="p">(</span><span class="n">Integer</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="na">value</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">swapToLowHighOrder</span><span class="p">(</span><span class="n">IntByReference</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">value</span> <span class="o">&gt;</span> <span class="n">i</span><span class="p">.</span><span class="na">value</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">tmp</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">value</span><span class="p">;</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">i</span><span class="p">.</span><span class="na">value</span><span class="p">;</span>
+            <span class="n">i</span><span class="p">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">tmp</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">swapper</span><span class="p">(</span><span class="kt">int</span> <span class="n">n0</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">IntByReference</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IntByReference</span><span class="p">(</span><span class="n">n0</span><span class="p">);</span>
+        <span class="n">IntByReference</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IntByReference</span><span class="p">(</span><span class="n">n1</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Before: "</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="n">b</span><span class="p">);</span>
+        <span class="n">a</span><span class="p">.</span><span class="na">swapToLowHighOrder</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>  <span class="c1">// conditionally build swap method to change values of a, b</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"After: "</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="n">b</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">ags</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">IntByReference</span><span class="p">.</span><span class="na">swapper</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span> <span class="mi">16</span><span class="p">);</span>
+        <span class="n">IntByReference</span><span class="p">.</span><span class="na">swapper</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">21</span><span class="p">);</span>
+        <span class="n">IntByReference</span><span class="p">.</span><span class="na">swapper</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+<span class="n">IntByReference</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Before: 21 16
+After: 16 21
+
+Before: 16 21
+After: 16 21
+
+Before: 16 -1
+After: -1 16
+
 </pre>
 </div>
 </div>
