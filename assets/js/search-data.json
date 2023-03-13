@@ -2,7 +2,7 @@
   
     
         "post0": {
-            "title": "Final Week",
+            "title": "39 MCQ",
             "content": "MCQ . Score : 34/39 . . Q9 . I got this one wrong because each value has equal probability, versus splitting up the dice which would make certain probabilities more, and 1 cannot be included so E is correct. . Q11 . The answer is wrong because the reverse of “nono” is “onon” and since these two strings are not equal, the method will return false and the answer is E . Q19 . The answer is wrong because all 3 statements are correct. Statement two only runs once so it wont print anything, and Statement three only contains odd numbers so it wont print anything since % 2 wont do anything, and the answer is E . Q30 . This answers is wrong because the first one just runs each segment of code versus only running if it has a certain condition, which would be checked in else if and else, so only two works. . Q31 . This answer is wrong because as it loops through, it creates less and less X’s into the code and the one i selected would be possible if there was for loops checking for even or odd. .",
             "url": "https://prorichyman.github.io/CSA-Fastpages/keytakeaways/2023/03/13/39question.html",
             "relUrl": "/keytakeaways/2023/03/13/39question.html",
