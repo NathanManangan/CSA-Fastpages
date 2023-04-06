@@ -162,7 +162,7 @@ window.onload = wrap_img;
 
   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// create an example array to be sorted</span>
-    <span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span> <span class="p">};</span>
+    <span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span> <span class="p">};</span>
 
     <span class="c1">// print the unsorted array to the console</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"-- Merge --"</span><span class="p">);</span>
@@ -277,11 +277,11 @@ window.onload = wrap_img;
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>-- Merge --
 Unsorted array:
-3 7 12 18 11 6 5
+3 7 12 18 11 6 5 8
 Sorted array:
-3 5 6 7 11 12 18
+3 5 6 7 8 11 12 18
 Runtime: 
-4291 nanoseconds
+7750 nanoseconds
 
 </pre>
 </div>
@@ -598,11 +598,11 @@ Runtime:
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>-- Merge --
 Unsorted array:
-3 7 12 18 11 6 5
+3 7 12 18 11 6 5 8
 Sorted array:
-3 5 6 7 11 12 18
+3 5 6 7 8 11 12 18
 Runtime: 
-4792 nanoseconds
+4500 nanoseconds
 
 
 -- Bubble --
@@ -611,7 +611,7 @@ Unsorted:
 Sorted:
 2 3 5 7 9 11 15 
 Runtime: 
-162000 nanoseconds
+77750 nanoseconds
 </pre>
 </div>
 </div>
