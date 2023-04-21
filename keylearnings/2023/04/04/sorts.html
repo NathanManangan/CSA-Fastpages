@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      7 min read
     
 </span></p>
 
@@ -320,6 +320,7 @@ Runtime:
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
         <span class="kt">int</span><span class="o">[]</span> <span class="n">list</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">};</span> <span class="c1">// list</span>
         <span class="kt">int</span> <span class="n">tmp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">swaps</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"-- Bubble --"</span><span class="p">);</span>
@@ -336,6 +337,7 @@ Runtime:
                     <span class="n">tmp</span> <span class="o">=</span> <span class="n">list</span><span class="o">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span>
                     <span class="n">list</span><span class="o">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">list</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
                     <span class="n">list</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">tmp</span><span class="p">;</span>
+                    <span class="n">swaps</span> <span class="o">=</span> <span class="n">swaps</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
                 <span class="p">}</span>
             <span class="p">}</span>
         <span class="p">}</span>
@@ -348,6 +350,7 @@ Runtime:
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">""</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Runtime: "</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">totalTime</span> <span class="o">+</span> <span class="s">" nanoseconds"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Swaps:"</span> <span class="o">+</span> <span class="n">swaps</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
@@ -371,7 +374,8 @@ Unsorted:
 Sorted:
 2 3 5 7 9 11 15 
 Runtime: 
-116709 nanoseconds
+351708 nanoseconds
+Swaps:12
 </pre>
 </div>
 </div>
@@ -659,87 +663,6 @@ Sorted:
 0 2 3 6 9 12 14 
 Runtime: 
 1078125 nanoseconds
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.lang.Integer</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Hash</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
-        <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">hashmap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
-        <span class="kt">int</span><span class="o">[]</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5000</span><span class="o">]</span><span class="p">;</span>
-
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">list</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">Integer</span> <span class="n">value</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">5000</span><span class="p">);</span>
-            <span class="n">hashmap</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
-            <span class="n">list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span>
-        <span class="p">}</span>
-
-        <span class="kt">long</span> <span class="n">lookUpTime</span> <span class="o">=</span> <span class="p">(</span><span class="n">lookUp</span><span class="p">(</span><span class="n">hashmap</span><span class="p">,</span> <span class="mi">12</span><span class="p">));</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Look up time: "</span> <span class="o">+</span> <span class="n">lookUpTime</span> <span class="o">+</span> <span class="s">" nanoseconds"</span><span class="p">);</span>
-        <span class="kt">long</span> <span class="n">binarySearchTime</span> <span class="o">=</span> <span class="p">(</span><span class="n">binarySearchTime</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="mi">12</span><span class="p">));</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Binary search time: "</span> <span class="o">+</span> <span class="n">binarySearchTime</span> <span class="o">+</span> <span class="s">" nanoseconds"</span><span class="p">);</span>
-        
-    <span class="p">}</span>
-
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">long</span> <span class="nf">lookUp</span><span class="p">(</span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">hashmap</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">long</span> <span class="n">start</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
-        <span class="n">hashmap</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
-        <span class="kt">long</span> <span class="n">end</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">long</span> <span class="nf">binarySearchTime</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">list</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">long</span> <span class="n">start</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
-        <span class="c1">// binary search </span>
-        <span class="kt">int</span> <span class="n">low</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">high</span> <span class="o">=</span> <span class="n">list</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">low</span> <span class="o">&lt;=</span> <span class="n">high</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="o">[</span><span class="n">middle</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">low</span> <span class="o">=</span> <span class="n">middle</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="o">[</span><span class="n">middle</span><span class="o">]</span> <span class="o">==</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">break</span><span class="p">;</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                <span class="n">high</span> <span class="o">=</span> <span class="n">middle</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="kt">long</span> <span class="n">end</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-<span class="n">Hash</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Look up time: 584 nanoseconds
-Binary search time: 1500 nanoseconds
 </pre>
 </div>
 </div>
